@@ -1,1 +1,43 @@
-<p>login works!</p>
+<app-auth-layout 
+title="Login into your account"
+primaryBtnText="Login Now"
+secondaryBtnText="Signup Now"
+(submit)="submit()"
+(navigate)="navigate()"
+[disablePrimaryBtn]="!loginForm.valid"
+>
+    <form [formGroup]="loginForm">
+        <app-primary-input
+        formControlName="email"
+        inputName="email"
+        type="email"
+        label="Email"
+        placeholder="johndoe@gmail.com"
+    >
+    <button type="button" class="btn-1" >
+        <span class="pi pi-envelope"></span>
+    </button>
+    
+    </app-primary-input>
+    <app-primary-input
+        formControlName="password"
+        inputName="password"
+        [type]="passwordFieldType"
+        label="Your Password"
+    >
+        <button type="button" class="btn-1" (click)="lock()">
+            <i [ngClass]="isLock ? 'pi pi-lock' : 'pi pi-lock-open'"></i>
+        </button>
+    </app-primary-input>
+
+        <button type="button" class="btn-reset" (click)="reset()" title="Recuperar senha">
+                Esqueceu sua senha?
+        </button>
+    </form>
+</app-auth-layout>
+
+<button (click)="darkModeTheme()" class="button-dark-mode">
+    <i [ngClass]="isDarkMode ? 'pi pi-sun' : 'pi pi-moon'"></i>
+</button>
+
+<div id="tsparticles"></div>
