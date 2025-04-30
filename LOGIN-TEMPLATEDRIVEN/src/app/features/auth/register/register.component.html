@@ -34,12 +34,12 @@ secondaryBtnText="Login"
     <app-primary-input
         formControlName="password"
         inputName="confirmpassword"
-        [type]="passwordFieldType"
+        [type]="passwordFieldTypeConfirm"
         label="Confirmpassword"
         autocomplete="current-password"
     >
-        <button type="button" class="btn-1" (click)="lock()">
-            <i [ngClass]="isLock ? 'pi pi-lock' : 'pi pi-lock-open'"></i>
+        <button type="button" class="btn-1" (click)="lockConfirm()">
+            <i [ngClass]="isLockConfirm ? 'pi pi-lock' : 'pi pi-lock-open'"></i>
         </button>
     </app-primary-input>
 

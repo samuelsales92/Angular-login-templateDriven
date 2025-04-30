@@ -30,8 +30,11 @@ export class RegisterComponent {
 
   loginForm!: FormGroup<LoginForm>;
   passwordFieldType: 'password' | 'text' = 'password';
+  passwordFieldTypeConfirm: 'password' | 'text' = 'password';
 
   isLock: boolean = true;
+
+  isLockConfirm: boolean = true;
 
   constructor(
     private router: Router,
@@ -55,6 +58,11 @@ export class RegisterComponent {
   lock() {
     this.isLock = !this.isLock;
     this.passwordFieldType = this.isLock ? 'password' : 'text';
+  }
+
+  lockConfirm() {
+    this.isLockConfirm = !this.isLockConfirm;
+    this.passwordFieldTypeConfirm = this.isLockConfirm ? 'password' : 'text';
   }
 
   navigate(){
