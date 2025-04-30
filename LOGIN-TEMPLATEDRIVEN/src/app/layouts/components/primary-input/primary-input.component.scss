@@ -1,4 +1,4 @@
-@import "../../../styles/variables.scss";
+@import "../../../../styles/variables.scss";
 @import "primeicons/primeicons.css";
 
 .input-wrapper {
@@ -6,7 +6,7 @@
     font-size: 12px;
     text-align: start;
     padding-bottom: 10px;
-
+    
     label {
         margin-bottom: 10px;
     }
@@ -15,7 +15,6 @@
         width: 100%;
         border-radius: 8px;
         display: flex;
-       
         
         .icon {
             padding: 12px;
@@ -32,6 +31,7 @@
             border-radius: 8px 0 0 8px;
             background-color: $gray-secondary-bg;
             padding: 12px 0 12px 5px;
+            width: 250px;
         }
 
     }

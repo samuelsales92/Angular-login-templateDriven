@@ -1,7 +1,7 @@
 <app-auth-layout 
-title="Login into your account"
-primaryBtnText="Login Now"
-secondaryBtnText="Signup Now"
+title="Faça login em sua conta"
+primaryBtnText="Faça login agora"
+secondaryBtnText="Inscreva-se agora"
 (submit)="submit()"
 (navigate)="navigate()"
 [disablePrimaryBtn]="!loginForm.valid"
@@ -23,7 +23,8 @@ secondaryBtnText="Signup Now"
         formControlName="password"
         inputName="password"
         [type]="passwordFieldType"
-        label="Your Password"
+        label="Senha"
+        autocomplete="current-password"
     >
         <button type="button" class="btn-1" (click)="lock()">
             <i [ngClass]="isLock ? 'pi pi-lock' : 'pi pi-lock-open'"></i>

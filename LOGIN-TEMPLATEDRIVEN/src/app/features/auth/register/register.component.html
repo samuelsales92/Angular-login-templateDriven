@@ -1,1 +1,50 @@
-<p>register works!</p>
+<app-auth-layout 
+title="Faça login em sua conta"
+primaryBtnText="Cadastrar"
+secondaryBtnText="Login"
+(submit)="submit()"
+(navigate)="navigate()"
+[disablePrimaryBtn]="!loginForm.valid"
+>
+    <form [formGroup]="loginForm">
+        <app-primary-input
+        formControlName="email"
+        inputName="email"
+        type="email"
+        label="Email"
+        placeholder="johndoe@gmail.com"
+    >
+    <button type="button" class="btn-1" >
+        <span class="pi pi-envelope"></span>
+    </button>
+    
+    </app-primary-input>
+    <app-primary-input
+        formControlName="password"
+        inputName="password"
+        [type]="passwordFieldType"
+        label="Senha"
+        autocomplete="current-password"
+    >
+        <button type="button" class="btn-1" (click)="lock()">
+            <i [ngClass]="isLock ? 'pi pi-lock' : 'pi pi-lock-open'"></i>
+        </button>
+    </app-primary-input>
+
+    <app-primary-input
+        formControlName="password"
+        inputName="confirmpassword"
+        [type]="passwordFieldType"
+        label="Confirmpassword"
+        autocomplete="current-password"
+    >
+        <button type="button" class="btn-1" (click)="lock()">
+            <i [ngClass]="isLock ? 'pi pi-lock' : 'pi pi-lock-open'"></i>
+        </button>
+    </app-primary-input>
+
+        <button type="button" class="btn-reset"  title="Recuperar senha">
+                Esqueceu sua senha?
+        </button>
+    </form>
+</app-auth-layout>

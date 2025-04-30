@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { AuthLayoutComponent } from '../../../layouts/auth-layout/auth-layout.component';
+import { AuthLayoutComponent } from '../../../layouts/components/auth-layout/auth-layout.component';
 import { CommonModule } from '@angular/common';
 
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { ToastrService } from 'ngx-toastr';
-import { PrimaryInputComponent } from '../../../layouts/primary-input/primary-input.component';
+import { PrimaryInputComponent } from '../../../layouts/components/primary-input/primary-input.component';
 import { PasswordModule } from 'primeng/password';
 
 

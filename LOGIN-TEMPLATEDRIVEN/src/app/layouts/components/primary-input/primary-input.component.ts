@@ -27,6 +27,7 @@ export class PrimaryInputComponent implements ControlValueAccessor {
   @Input() placeholder: string = "";
   @Input() label: string = "";
   @Input() inputName: string = "";
+  @Input() autocomplete: string = 'on'
 
   value: string = ''
   onChange: any = () => {}
